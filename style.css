@@ -11,12 +11,12 @@ body {
   
 }
 .container {
-    background: rgb(150, 10, 150);
+
+    background-image: url('img.jpg');
     margin: 50px;
     padding: 50px;
     border-radius: 25px;
-    width: 500px;
-    height: 500px;
+  
 }
 
 .title {
@@ -36,12 +36,36 @@ body {
 }
 
 .reset:hover {
-    color: powderblue;
+    color: #F2EBD3;
 }
 
 .game-grid {
+    background:whitesmoke;
     display: grid;
-    grid-template-columns: 250px 250px 250px ;
-    grid-template-rows: 250px 250px 250px ;
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: repeat(3,1fr) ;
     grid-gap: 15px ;
+    margin-top: 50px;
+}
+.game-cell {
+
+    background-image: url('img.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px ;
+    width: 200px;
+    
+}
+
+.x::before {
+    content: 'x' ;
+    font-size: 200px;
+}
+
+.o::before {
+    content: 'o' ;
+    color : #F2EBD3;
+    font-size: 200px;
 }
